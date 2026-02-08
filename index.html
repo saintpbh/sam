@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>천하도지(天下道志) v8.8</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <header>
+        <div class="status-item">
+            <span class="status-label">시기</span>
+            <span id="stat-date" class="status-value">190년 1월 1주</span>
+        </div>
+        <div class="status-item">
+            <span class="status-label">국면</span>
+            <span id="stat-phase" class="status-value">내정</span>
+        </div>
+        <div
+            style="font-family: 'Noto Serif KR', serif; font-size: 1.5rem; letter-spacing: 5px; color: var(--gold); text-shadow: 0 0 10px rgba(212,175,55,0.5);">
+            天下道志</div>
+        <div class="status-item">
+            <span class="status-label">자금 (금)</span>
+            <span id="stat-gold" class="status-value">0</span>
+        </div>
+        <div class="status-item">
+            <span class="status-label">군량 (미)</span>
+            <span id="stat-rice" class="status-value">0</span>
+        </div>
+        <div class="status-item" style="border-left: 1px solid #444; padding-left: 15px;">
+            <span class="status-label">군사</span>
+            <span id="stat-military" class="status-value">0</span>
+        </div>
+        <div class="status-item">
+            <span class="status-label">장수</span>
+            <span id="stat-generals" class="status-value">0</span>
+        </div>
+        <div class="status-item">
+            <span class="status-label">명성</span>
+            <span id="stat-fame" class="status-value">0</span>
+        </div>
+        <div class="status-item">
+            <span class="status-label">매력</span>
+            <span id="stat-charm" class="status-value">0</span>
+        </div>
+        <div class="status-item" id="open-officers"
+            style="cursor: pointer; border: 1px solid var(--gold); padding: 5px; border-radius: 4px; margin-right: 10px;">
+            <span class="status-label">인재</span>
+        </div>
+        <div class="status-item" id="open-items"
+            style="cursor: pointer; border: 1px solid var(--gold); padding: 5px; border-radius: 4px; margin-right: 10px;">
+            <span class="status-label">보물</span>
+        </div>
+        <div class="status-item" id="open-record"
+            style="cursor: pointer; border: 1px solid var(--gold); padding: 5px; border-radius: 4px; margin-right: 10px;">
+            <span class="status-label">기록</span>
+        </div>
+        <div class="status-item" id="toggle-fullscreen"
+            style="cursor: pointer; border: 1px solid var(--gold); padding: 5px; border-radius: 4px; margin-right: 10px;">
+            <span class="status-label">전체화면</span>
+        </div>
+        <div class="status-item" id="open-settings"
+            style="cursor: pointer; border: 1px solid var(--gold); padding: 5px; border-radius: 4px;">
+            <span class="status-label">설정</span>
+        </div>
+    </header>
+
+    <!-- Record Modal (Save/Load) -->
+    <div id="record-modal"
+        style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.8); z-index: 2000; align-items: center; justify-content: center;">
+        <div
+            style="background: #222; border: 2px solid var(--gold); padding: 30px; border-radius: 8px; width: 450px; display: flex; flex-direction: column; gap: 20px;">
+            <h2 style="color: var(--gold); margin: 0; font-family: var(--font-serif);">記錄 (기록)</h2>
+            <div style="display: flex; flex-direction: column; gap: 10px;">
+                <button id="save-btn-local" class="choice-btn"
+                    style="width: 100%; border-radius: 4px; font-size: 1.1rem; height: 50px;">
+                    現時 記錄 (현재 기록 저장)
+                </button>
+                <button id="load-btn-local" class="choice-btn"
+                    style="width: 100%; border-radius: 4px; font-size: 1.1rem; height: 50px;">
+                    記錄 讀取 (기록 불러오기)
+                </button>
+                <div id="save-status-msg"
+                    style="text-align: center; color: var(--gold); font-size: 0.9rem; height: 1.2rem;"></div>
+            </div>
+            <div style="font-size: 0.8rem; color: #888; line-height: 1.5;">
+                * 기록은 브라우저의 내부 저장소(LocalStorage)에 보관되오며, 브라우저 데이터를 삭제하면 함께 소멸될 수 있으니 주의하시옵소서.
+            </div>
+            <button id="close-record" class="choice-btn"
+                style="width: 100%; border-radius: 4px; height: 40px; font-size: 1rem;">닫기</button>
+        </div>
+    </div>
+
+    <!-- Settings Modal -->
+    <div id="settings-modal"
+        style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.8); z-index: 2000; align-items: center; justify-content: center;">
+        <div
+            style="background: #222; border: 2px solid var(--gold); padding: 30px; border-radius: 8px; width: 400px; display: flex; flex-direction: column; gap: 20px;">
+            <h2 style="color: var(--gold); margin: 0;">기술 설정</h2>
+            <div>
+                <label style="display: block; margin-bottom: 10px;">엔진 선택</label>
+                <select id="engine-select"
+                    style="width: 100%; padding: 10px; background: #333; color: white; border: 1px solid #444;">
+                    <option value="ollama">오라마 (Ollama - 로컬)</option>
+                    <option value="gemini">제미나이 (Gemini - 클라우드)</option>
+                    <option value="groq">그록 (Groq - 초고속 클라우드)</option>
+                </select>
+            </div>
+            <div id="gemini-model-container" style="display: none;">
+                <label style="display: block; margin-bottom: 10px;">세부 모델 선택</label>
+                <select id="gemini-model-select"
+                    style="width: 100%; padding: 10px; background: #333; color: white; border: 1px solid #444;">
+                    <option value="gemini-2.0-flash">Gemini 2.0 Flash (빠름/효율적)</option>
+                    <option value="gemini-2.5-pro">Gemini 2.5 Pro (최고 지능/심층 서사)</option>
+                    <option value="gemini-2.5-flash">Gemini 2.5 Flash (최신/균형)</option>
+                </select>
+            </div>
+            <div id="gemini-key-container" style="display: none;">
+                <label style="display: block; margin-bottom: 10px;">제미나이 API 키</label>
+                <input type="password" id="gemini-api-key" placeholder="키를 입력하세요..."
+                    style="width: 100%; padding: 10px; background: #333; color: white; border: 1px solid #444; box-sizing: border-box;">
+            </div>
+            <div id="groq-model-container" style="display: none;">
+                <label style="display: block; margin-bottom: 10px;">그록 모델 선택</label>
+                <select id="groq-model-select"
+                    style="width: 100%; padding: 10px; background: #333; color: white; border: 1px solid #444;">
+                    <option value="llama-3.3-70b-versatile">Llama 3.3 70B (추천/균형)</option>
+                    <option value="llama-3.3-70b-specdec">Llama 3.3 70B SpecDec (초고속)</option>
+                    <option value="llama3-groq-70b-8192-tool-use-preview">Llama 3 Groq 70B (도구 사용)</option>
+                    <option value="llama3-groq-8b-8192-tool-use-preview">Llama 3 Groq 8B (빠름/도구)</option>
+                    <option value="llama3-8b-8192">Llama 3 8B (빠름)</option>
+                    <option value="mixtral-8x7b-32768">Mixtral 8x7B (긴 컨텍스트)</option>
+                    <option value="gemma2-9b-it">Gemma 2 9B (효율적)</option>
+                </select>
+            </div>
+            <div id="groq-key-container" style="display: none;">
+                <label style="display: block; margin-bottom: 10px;">그록 API 키</label>
+                <input type="password" id="groq-api-key" placeholder="gsk_로 시작하는 키를 입력하세요..."
+                    style="width: 100%; padding: 10px; background: #333; color: white; border: 1px solid #444; box-sizing: border-box;">
+            </div>
+            <button id="save-settings" class="choice-btn" style="width: 100%; border-radius: 4px;">저장 및 닫기</button>
+        </div>
+    </div>
+
+    <!-- Strategic Modals -->
+    <div id="officers-modal" class="strategic-panel">
+        <div class="panel-header">
+            <div class="panel-title">♣ 麾下將帥 (휘하장수)</div>
+            <div class="close-panel" onclick="document.getElementById('officers-modal').style.display='none'">✖</div>
+        </div>
+        <div id="officer-list-content" class="officer-grid"></div>
+    </div>
+
+    <div id="items-modal" class="strategic-panel">
+        <div class="panel-header">
+            <div class="panel-title">♣ 所持寶物 (소지보물)</div>
+            <div class="close-panel" onclick="document.getElementById('items-modal').style.display='none'">✖</div>
+        </div>
+        <div id="item-list-content" class="item-list"></div>
+    </div>
+
+    <div class="main-container">
+        <section id="narrative-section">
+            <div id="portrait-box"
+                style="display: none; position: absolute; top: 20px; right: 20px; width: 150px; height: 225px; border: 3px solid var(--gold); border-radius: 8px; overflow: hidden; box-shadow: 0 0 20px rgba(0,0,0,0.8); background: #000; z-index: 100;">
+                <img id="speaker-portrait" src="" style="width: 100%; height: 100%; object-fit: cover;">
+                <div id="speaker-name"
+                    style="position: absolute; bottom: 0; width: 100%; background: rgba(0,0,0,0.8); color: var(--gold); text-align: center; font-size: 0.9rem; padding: 5px 0; border-top: 1px solid var(--gold);">
+                </div>
+            </div>
+            <div id="text-display">
+                <!-- Narrative content will flow here -->
+            </div>
+            <div id="continue-indicator">... [계속하려면 화면을 터치하거나 엔터를 누르시옵소서] ...</div>
+        </section>
+
+        <section id="map-section">
+            <!-- Main World Map -->
+            <div class="map-card">
+                <div class="map-header">
+                    <span>天下大勢圖 (천하대세도)</span>
+                    <span id="current-city-name" style="font-size: 0.8rem; color: #fff;">-</span>
+                </div>
+                <div class="map-container" id="visual-map-container">
+                    <img src="./map.png" id="base-map" class="map-image">
+                    <div id="territory-grid" class="map-territory-grid"></div>
+                    <div id="player-marker" style="display: none;">
+                        <div class="label">주공</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tactical Detail View -->
+            <div class="map-card" id="tactical-view">
+                <div class="map-header">
+                    <span>局部地形圖 (국부지형도)</span>
+                    <span style="font-size: 0.6rem; opacity: 0.7;">TACTICAL VIEW</span>
+                </div>
+                <div class="map-container">
+                    <img src="./public/tiles/tile_0_0.png" id="tactical-map" class="map-image">
+                    <div class="tactical-marker"></div>
+                </div>
+            </div>
+
+            <div id="status-table"></div>
+        </section>
+    </div>
+
+    <div id="control-panel">
+        <div id="choice-container" style="display: none; gap: 10px;">
+            <!-- Buttons will be generated here -->
+        </div>
+        <div class="input-area" id="default-input">
+            <input type="text" id="user-input" placeholder="명령을 입력하거나 번호를 선택하세요..." autocomplete="off">
+            <button id="send-btn" class="choice-btn">하달</button>
+        </div>
+    </div>
+
+    <script type="module" src="./main.js"></script>
+</body>
+
+</html>

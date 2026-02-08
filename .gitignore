@@ -1,0 +1,9 @@
+node_modules/
+.DS_Store
+server.log
+gen_tiles.log
+nohup.out
+# public/tiles/*.png  <-- removed to allow tiles on GitHub
+!public/tiles/.gitkeep
+
+*.log

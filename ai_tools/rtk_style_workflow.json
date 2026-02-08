@@ -1,0 +1,86 @@
+{
+    "3": {
+        "inputs": {
+            "seed": 42,
+            "steps": 30,
+            "cfg": 7,
+            "sampler_name": "dpmpp_2m",
+            "scheduler": "karras",
+            "denoise": 1,
+            "model": [
+                "4",
+                0
+            ],
+            "positive": [
+                "6",
+                0
+            ],
+            "negative": [
+                "7",
+                0
+            ],
+            "latent_image": [
+                "5",
+                0
+            ]
+        },
+        "class_type": "KSampler"
+    },
+    "4": {
+        "inputs": {
+            "ckpt_name": "Juggernaut-XL-v9.safetensors"
+        },
+        "class_type": "CheckpointLoaderSimple"
+    },
+    "5": {
+        "inputs": {
+            "width": 1024,
+            "height": 1024,
+            "batch_size": 1
+        },
+        "class_type": "EmptyLatentImage"
+    },
+    "6": {
+        "inputs": {
+            "text": "high-quality professional character portrait of Cao Cao from Romance of the Three Kingdoms, detailed face, charismatic and ambitious expression, wearing ornate Han dynasty black and gold silk robes and an official headpiece. Stylized digital painting similar to Koei RTK14, sharp focus, clean lines, majestic atmosphere, white background, high resolution, 8k",
+            "clip": [
+                "4",
+                1
+            ]
+        },
+        "class_type": "CLIPTextEncode"
+    },
+    "7": {
+        "inputs": {
+            "text": "low quality, blurry, distorted face, bad anatomy, text, watermark, signature, messy background",
+            "clip": [
+                "4",
+                1
+            ]
+        },
+        "class_type": "CLIPTextEncode"
+    },
+    "8": {
+        "inputs": {
+            "samples": [
+                "3",
+                0
+            ],
+            "vae": [
+                "4",
+                2
+            ]
+        },
+        "class_type": "VAEDecode"
+    },
+    "9": {
+        "inputs": {
+            "filename_prefix": "RTK_Portrait",
+            "images": [
+                "8",
+                0
+            ]
+        },
+        "class_type": "SaveImage"
+    }
+}

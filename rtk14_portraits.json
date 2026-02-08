@@ -1,0 +1,312 @@
+[
+    {
+        "name": "Xu Chu",
+        "id": "kyocho",
+        "highResUrl": "https://www.koeitecmoamerica.com/rtk14/images/characters/image_kyocho.png"
+    },
+    {
+        "name": "Zhang He",
+        "id": "gichoukou",
+        "highResUrl": "https://www.koeitecmoamerica.com/rtk14/images/characters/image_gichoukou.png"
+    },
+    {
+        "name": "Cao Xiu",
+        "id": "soukyu",
+        "highResUrl": "https://www.koeitecmoamerica.com/rtk14/images/characters/image_soukyu.png"
+    },
+    {
+        "name": "Cao Zhen",
+        "id": "soushin",
+        "highResUrl": "https://www.koeitecmoamerica.com/rtk14/images/characters/image_soushin.png"
+    },
+    {
+        "name": "Cao Chong",
+        "id": "souchu",
+        "highResUrl": "https://www.koeitecmoamerica.com/rtk14/images/characters/image_souchu.png"
+    },
+    {
+        "name": "Cheng Pu",
+        "id": "teifu",
+        "highResUrl": "https://www.koeitecmoamerica.com/rtk14/images/characters/image_teifu.png"
+    },
+    {
+        "name": "Ma Chao",
+        "id": "bachou",
+        "highResUrl": "https://www.koeitecmoamerica.com/rtk14/images/characters/image_bachou.png"
+    },
+    {
+        "name": "Cao Cao",
+        "id": "sousou",
+        "highResUrl": "https://www.koeitecmoamerica.com/rtk14/images/characters/image_sousou.png"
+    },
+    {
+        "name": "Xiahou Dun",
+        "id": "kakouton",
+        "highResUrl": "https://www.koeitecmoamerica.com/rtk14/images/characters/image_kakouton.png"
+    },
+    {
+        "name": "Xiahou Yuan",
+        "id": "kakouen",
+        "highResUrl": "https://www.koeitecmoamerica.com/rtk14/images/characters/image_kakouen.png"
+    },
+    {
+        "name": "Yue Jin",
+        "id": "gakushin",
+        "highResUrl": "https://www.koeitecmoamerica.com/rtk14/images/characters/image_gakushin.png"
+    },
+    {
+        "name": "Xu Huang",
+        "id": "jokou",
+        "highResUrl": "https://www.koeitecmoamerica.com/rtk14/images/characters/image_jokou.png"
+    },
+    {
+        "name": "Zhang Liao",
+        "id": "chouryou",
+        "highResUrl": "https://www.koeitecmoamerica.com/rtk14/images/characters/image_chouryou.png"
+    },
+    {
+        "name": "Xun Yu",
+        "id": "juniku",
+        "highResUrl": "https://www.koeitecmoamerica.com/rtk14/images/characters/image_juniku.png"
+    },
+    {
+        "name": "Guo Jia",
+        "id": "kakuka",
+        "highResUrl": "https://www.koeitecmoamerica.com/rtk14/images/characters/image_kakuka.png"
+    },
+    {
+        "name": "Jia Xu",
+        "id": "kaku",
+        "highResUrl": "https://www.koeitecmoamerica.com/rtk14/images/characters/image_kaku.png"
+    },
+    {
+        "name": "Pang De",
+        "id": "houtoku",
+        "highResUrl": "https://www.koeitecmoamerica.com/rtk14/images/characters/image_houtoku.png"
+    },
+    {
+        "name": "Sima Yi",
+        "id": "shibai",
+        "highResUrl": "https://www.koeitecmoamerica.com/rtk14/images/characters/image_shibai.png"
+    },
+    {
+        "name": "Wang Yuanji",
+        "id": "ougenki",
+        "highResUrl": "https://www.koeitecmoamerica.com/rtk14/images/characters/image_ougenki.png"
+    },
+    {
+        "name": "Wen Yang",
+        "id": "bunou",
+        "highResUrl": "https://www.koeitecmoamerica.com/rtk14/images/characters/image_bunou.png"
+    },
+    {
+        "name": "Sun Jian",
+        "id": "sonken0",
+        "highResUrl": "https://www.koeitecmoamerica.com/rtk14/images/characters/image_sonken0.png"
+    },
+    {
+        "name": "Sun Ce",
+        "id": "sonsaku",
+        "highResUrl": "https://www.koeitecmoamerica.com/rtk14/images/characters/image_sonsaku.png"
+    },
+    {
+        "name": "Sun Quan",
+        "id": "sonken",
+        "highResUrl": "https://www.koeitecmoamerica.com/rtk14/images/characters/image_sonken.png"
+    },
+    {
+        "name": "Zhou Yu",
+        "id": "shuyu",
+        "highResUrl": "https://www.koeitecmoamerica.com/rtk14/images/characters/image_shuyu.png"
+    },
+    {
+        "name": "Lu Su",
+        "id": "roshuku",
+        "highResUrl": "https://www.koeitecmoamerica.com/rtk14/images/characters/image_roshuku.png"
+    },
+    {
+        "name": "Lu Meng",
+        "id": "ryomou",
+        "highResUrl": "https://www.koeitecmoamerica.com/rtk14/images/characters/image_ryomou.png"
+    },
+    {
+        "name": "Lu Xun",
+        "id": "rikuson",
+        "highResUrl": "https://www.koeitecmoamerica.com/rtk14/images/characters/image_rikuson.png"
+    },
+    {
+        "name": "Zhang Zhao",
+        "id": "choushou",
+        "highResUrl": "https://www.koeitecmoamerica.com/rtk14/images/characters/image_choushou.png"
+    },
+    {
+        "name": "Zhang Hong",
+        "id": "choukou",
+        "highResUrl": "https://www.koeitecmoamerica.com/rtk14/images/characters/image_choukou.png"
+    },
+    {
+        "name": "Kan Ze",
+        "id": "kantaku",
+        "highResUrl": "https://www.koeitecmoamerica.com/rtk14/images/characters/image_kantaku.png"
+    },
+    {
+        "name": "Zhou Tai",
+        "id": "shutai",
+        "highResUrl": "https://www.koeitecmoamerica.com/rtk14/images/characters/image_shutai.png"
+    },
+    {
+        "name": "Gan Ning",
+        "id": "kannei",
+        "highResUrl": "https://www.koeitecmoamerica.com/rtk14/images/characters/image_kannei.png"
+    },
+    {
+        "name": "Zhuge Ke",
+        "id": "shokatsukaku",
+        "highResUrl": "https://www.koeitecmoamerica.com/rtk14/images/characters/image_shokatsukaku.png"
+    },
+    {
+        "name": "Da Qiao",
+        "id": "daikyou",
+        "highResUrl": "https://www.koeitecmoamerica.com/rtk14/images/characters/image_daikyou.png"
+    },
+    {
+        "name": "Xiao Qiao",
+        "id": "shoukyou",
+        "highResUrl": "https://www.koeitecmoamerica.com/rtk14/images/characters/image_shoukyou.png"
+    },
+    {
+        "name": "Sun Shangxiang",
+        "id": "sonshoukou",
+        "highResUrl": "https://www.koeitecmoamerica.com/rtk14/images/characters/image_sonshoukou.png"
+    },
+    {
+        "name": "Bu Lianshi",
+        "id": "horenshi",
+        "highResUrl": "https://www.koeitecmoamerica.com/rtk14/images/characters/image_horenshi.png"
+    },
+    {
+        "name": "Liu Bei",
+        "id": "ryubi",
+        "highResUrl": "https://www.koeitecmoamerica.com/rtk14/images/characters/image_ryubi.png"
+    },
+    {
+        "name": "Guan Yu",
+        "id": "kanu",
+        "highResUrl": "https://www.koeitecmoamerica.com/rtk14/images/characters/image_kanu.png"
+    },
+    {
+        "name": "Zhang Fei",
+        "id": "chouhi",
+        "highResUrl": "https://www.koeitecmoamerica.com/rtk14/images/characters/image_chouhi.png"
+    },
+    {
+        "name": "Zhao Yun",
+        "id": "chouun",
+        "highResUrl": "https://www.koeitecmoamerica.com/rtk14/images/characters/image_chouun.png"
+    },
+    {
+        "name": "Zhuge Liang",
+        "id": "shokatsuryou",
+        "highResUrl": "https://www.koeitecmoamerica.com/rtk14/images/characters/image_shokatsuryou.png"
+    },
+    {
+        "name": "Xu Shu",
+        "id": "josho",
+        "highResUrl": "https://www.koeitecmoamerica.com/rtk14/images/characters/image_josho.png"
+    },
+    {
+        "name": "Fa Zheng",
+        "id": "housei",
+        "highResUrl": "https://www.koeitecmoamerica.com/rtk14/images/characters/image_housei.png"
+    },
+    {
+        "name": "Huang Zhong",
+        "id": "kouchu",
+        "highResUrl": "https://www.koeitecmoamerica.com/rtk14/images/characters/image_kouchu.png"
+    },
+    {
+        "name": "Wei Yan",
+        "id": "gien",
+        "highResUrl": "https://www.koeitecmoamerica.com/rtk14/images/characters/image_gien.png"
+    },
+    {
+        "name": "Zhou Cang",
+        "id": "shusou",
+        "highResUrl": "https://www.koeitecmoamerica.com/rtk14/images/characters/image_shusou.png"
+    },
+    {
+        "name": "Liu Shan",
+        "id": "ryuzen",
+        "highResUrl": "https://www.koeitecmoamerica.com/rtk14/images/characters/image_ryuzen.png"
+    },
+    {
+        "name": "Jiang Wei",
+        "id": "kyoui",
+        "highResUrl": "https://www.koeitecmoamerica.com/rtk14/images/characters/image_kyoui.png"
+    },
+    {
+        "name": "Zhang Jiao",
+        "id": "choukaku",
+        "highResUrl": "https://www.koeitecmoamerica.com/rtk14/images/characters/image_choukaku.png"
+    },
+    {
+        "name": "Zhang Bao",
+        "id": "chouhou",
+        "highResUrl": "https://www.koeitecmoamerica.com/rtk14/images/characters/image_chouhou.png"
+    },
+    {
+        "name": "Dong Zhuo",
+        "id": "toutaku",
+        "highResUrl": "https://www.koeitecmoamerica.com/rtk14/images/characters/image_toutaku.png"
+    },
+    {
+        "name": "Li Ru",
+        "id": "riju",
+        "highResUrl": "https://www.koeitecmoamerica.com/rtk14/images/characters/image_riju.png"
+    },
+    {
+        "name": "Lu Bu",
+        "id": "ryofu",
+        "highResUrl": "https://www.koeitecmoamerica.com/rtk14/images/characters/image_ryofu.png"
+    },
+    {
+        "name": "Diao Chan",
+        "id": "chousen",
+        "highResUrl": "https://www.koeitecmoamerica.com/rtk14/images/characters/image_chousen.png"
+    },
+    {
+        "name": "Chen Gong",
+        "id": "chinkyu",
+        "highResUrl": "https://www.koeitecmoamerica.com/rtk14/images/characters/image_chinkyu.png"
+    },
+    {
+        "name": "Yuan Shao",
+        "id": "enshou",
+        "highResUrl": "https://www.koeitecmoamerica.com/rtk14/images/characters/image_enshou.png"
+    },
+    {
+        "name": "Yan Liang",
+        "id": "ganryou",
+        "highResUrl": "https://www.koeitecmoamerica.com/rtk14/images/characters/image_ganryou.png"
+    },
+    {
+        "name": "Wen Chou",
+        "id": "bunshu",
+        "highResUrl": "https://www.koeitecmoamerica.com/rtk14/images/characters/image_bunshu.png"
+    },
+    {
+        "name": "Shen Pei",
+        "id": "shinpai",
+        "highResUrl": "https://www.koeitecmoamerica.com/rtk14/images/characters/image_shinpai.png"
+    },
+    {
+        "name": "Yuan Shu",
+        "id": "enjutsu",
+        "highResUrl": "https://www.koeitecmoamerica.com/rtk14/images/characters/image_enjutsu.png"
+    },
+    {
+        "name": "Zhu Rong",
+        "id": "shukuyu",
+        "highResUrl": "https://www.koeitecmoamerica.com/rtk14/images/characters/image_shukuyu.png"
+    }
+]
